@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dartpad-nav-color: #1c2834;
+    --dartpad-color: #0e161f;
+}
+
+.main-content-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-post-layout {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    gap: 0.5rem;
+}
+
+.dartpad-nav-theme {
+    background-color: var(--dartpad-nav-color);
+    color: #fff;
+}
+
+.dartpad-theme {
+    background-color: var(--dartpad-color);
+    color: #fff;
+}
+
+.dartpad-boxshade {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0,0,0,.12);
+}
+
+.contain-image {
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+}
+
+.img-border-wht {
+    box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
+}
+
+.nav-img {
+    height: 3rem;
+    width: auto;
+}
