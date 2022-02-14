@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Like;
 
 class User extends Authenticatable
 {
@@ -47,5 +48,11 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function likes() {
+        return $this->hasMany(Like::class);
+    }
 
+    public function receivedLikes() {
+        return $this->hasManyThrough(Like::class, Post::class);
+    }
 }
